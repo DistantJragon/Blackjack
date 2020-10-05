@@ -73,6 +73,7 @@ def dealerhand():
         whatnumber()
     print("?")
 def twentyone():
+    ## twentyonecheck is a local variable, in this function, which doesn't change the gobal one. You need to either have twentyonecheck as a parameter or have global twentyonecheck
     twentyonecheck = comparenumber[0]+comparenumber[1]
     for i in range (extradealer, extranumber+extradealer):
         twentyonecheck += comparenumber[i]
