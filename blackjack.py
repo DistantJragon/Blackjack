@@ -95,9 +95,10 @@ while True:
         print("Your hand total equals", comparenumber[0]+comparenumber[1], " ")
     else:
         print()
+        ## twentyonecheck isn't being changed from 0
         print("Your hand total equals", twentyonecheck, " ")
-    action = input("Do you want to hit or stand (H or S)?: ")
-    if action == ("H"):
+    action = input("Do you want to hit or stand (H or S)?: ").lower()
+    if action == ("h"):
         havehit = 1
         reset()
         playerhand()
@@ -112,7 +113,7 @@ while True:
             break
         if twentyonecheck == 21:
             print ("You got a 21, you either won or tied")
-    if action == ("S"):
+    if action == ("s"):
         if havehit == 0:
             print ("You ended with a", comparenumber[0]+comparenumber[1]," ")
         else:
